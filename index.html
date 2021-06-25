@@ -6,10 +6,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GPS Example</title>
 
+	<style type="text/css">
+		div {
+			padding:10px; 
+			margin-left:10px; 
+			float: left; 
+			border: 1px solid #000;
+		}
+	</style>
+
 	<script src="/js/gps.js"></script>
 </head>
 <body>
 	<h1>Current GPS Coordinates</h1>
+	<button id="shot">Take a Shot</button>
+	<button id="nextHole">Next Hole</button>
+
+	<button id="endGame">End Game</button>
+	<hr style="clear:both;">
+	
+
+	<div>
+		<h2>Golf Score (<span id="score">0</span>)</h2>
+
+		<strong>Current Hole:</strong> <span id="currentHole">1</span><br>
+		<strong>Shot:</strong> <span id="currentShot">1</span><br>
+
+		<ol id="scorecard">
+		</ol>
+
+	</div>
+
 	<div style="padding:10px; margin-left:10px; float: left; border: 1px solid #000;">
 		<h2>Current Position</h2>
 		<p>
@@ -17,11 +44,11 @@
 			Longitude: <span id="long">0</span>
 		</p>
 	</div>
-	<div style="padding:10px; margin-left:10px; float: left; border: 1px solid #000;">
+	<div>
 		<h2>Previous Position</h2>
 		<p>
-			Latitude: <span id="oldlat">33.5006222</span><br>
-			Longitude: <span id="oldlong">-82.5036503</span>
+			Latitude: <span id="oldlat">33.501</span><br>
+			Longitude: <span id="oldlong">-82.504</span>
 		</p>
 	</div>
 
